@@ -103,6 +103,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7675ff9faa50fcc4e88d89da2fb74765, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6270849639683481772}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7675ff9faa50fcc4e88d89da2fb74765, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2103463263318801593}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7675ff9faa50fcc4e88d89da2fb74765, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6931211268185876199}
   m_SourcePrefab: {fileID: 100100000, guid: 7675ff9faa50fcc4e88d89da2fb74765, type: 3}
 --- !u!1 &193007726507438713 stripped
 GameObject:
@@ -195,11 +201,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c87f84247dcf3244cb02ad1451409758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackController
-  debugAttacks: 0
-  state: {fileID: 0}
-  animatorDriver: {fileID: 0}
-  lightJab: {fileID: 0}
-  heavyCross: {fileID: 0}
+  debugAttacks: 1
+  state: {fileID: 7378820352962772495}
+  animatorDriver: {fileID: 3654878259042105479}
+  lightJab: {fileID: 11400000, guid: ecfad2fc8302d7e48a6ffcb31be5e1f0, type: 2}
+  heavyCross: {fileID: 11400000, guid: 74a581cec819b5840bb051384cada2bb, type: 2}
+--- !u!114 &2103463263318801593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193007726507438713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bc887dead066a488629c33f6974e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovementController
+  debugMovement: 1
+  debugStepGizmos: 1
+  gizmoColor: {r: 0, g: 1, b: 1, a: 1}
+  state: {fileID: 7378820352962772495}
+  animatorDriver: {fileID: 3654878259042105479}
+  movementData: {fileID: 11400000, guid: 518d46c4a86463f4aae707c4b66119c3, type: 2}
+--- !u!114 &6931211268185876199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193007726507438713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a99a8c8bdc151d4aba48674bb09adc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DodgeController
+  debugDodge: 1
+  state: {fileID: 7378820352962772495}
+  animatorDriver: {fileID: 3654878259042105479}
+  dodgeData: {fileID: 11400000, guid: 52c4c6ef7ca260d44b8a7597e77f8e00, type: 2}
 --- !u!4 &713366638792140995 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7675ff9faa50fcc4e88d89da2fb74765, type: 3}

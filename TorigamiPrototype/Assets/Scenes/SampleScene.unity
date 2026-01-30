@@ -119,28 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &144029232 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3654878259042105479, guid: b948020b305917c48b9b76c1cb7f0419, type: 3}
-  m_PrefabInstance: {fileID: 8092660722148373841}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981704027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c30563e22ff4e4f8beac2b73534e77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimatorDriver
---- !u!114 &144029233 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7378820352962772495, guid: b948020b305917c48b9b76c1cb7f0419, type: 3}
-  m_PrefabInstance: {fileID: 8092660722148373841}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981704027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 390eb144947202148b5174fd161702ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CombatStateTracker
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,27 +432,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1981704027 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 193007726507438713, guid: b948020b305917c48b9b76c1cb7f0419, type: 3}
-  m_PrefabInstance: {fileID: 8092660722148373841}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1981704032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981704027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68bc887dead066a488629c33f6974e13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovementController
-  debugMovement: 1
-  state: {fileID: 144029233}
-  animatorDriver: {fileID: 144029232}
-  movementData: {fileID: 11400000, guid: 518d46c4a86463f4aae707c4b66119c3, type: 2}
 --- !u!1001 &8092660722148373841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -527,33 +484,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6270849639683481772, guid: b948020b305917c48b9b76c1cb7f0419, type: 3}
-      propertyPath: state
-      value: 
-      objectReference: {fileID: 144029233}
-    - target: {fileID: 6270849639683481772, guid: b948020b305917c48b9b76c1cb7f0419, type: 3}
-      propertyPath: lightJab
-      value: 
-      objectReference: {fileID: 11400000, guid: ecfad2fc8302d7e48a6ffcb31be5e1f0, type: 2}
-    - target: {fileID: 6270849639683481772, guid: b948020b305917c48b9b76c1cb7f0419, type: 3}
-      propertyPath: heavyCross
-      value: 
-      objectReference: {fileID: 11400000, guid: 74a581cec819b5840bb051384cada2bb, type: 2}
-    - target: {fileID: 6270849639683481772, guid: b948020b305917c48b9b76c1cb7f0419, type: 3}
-      propertyPath: debugAttacks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270849639683481772, guid: b948020b305917c48b9b76c1cb7f0419, type: 3}
-      propertyPath: animatorDriver
-      value: 
-      objectReference: {fileID: 144029232}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 193007726507438713, guid: b948020b305917c48b9b76c1cb7f0419, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1981704032}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b948020b305917c48b9b76c1cb7f0419, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

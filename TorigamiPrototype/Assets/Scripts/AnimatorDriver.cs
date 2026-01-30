@@ -18,5 +18,11 @@ public class AnimatorDriver : MonoBehaviour
         animator.SetTrigger(triggerName);
         CombatDebug.Log(debug, "Animator", $"Step Trigger fired → {triggerName}");
     }
+    public void PlayDodge(bool debug)
+    {
+        animator.SetTrigger("FoldDodge");
+        CombatDebug.Log(debug, "Animator", "Trigger fired → FoldDodge");
+    }
+
 
 }

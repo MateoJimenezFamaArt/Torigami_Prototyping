@@ -13,6 +13,9 @@ public class CombatStateTracker : MonoBehaviour
 
     public bool CanMove => !IsAttacking && !IsRecovering && !IsStepping;
 
+    public bool IsDodging { get; private set; }
+
+    public bool CanDodge => !IsAttacking && !IsRecovering && !IsStepping && !IsDodging;
 
     public bool CanAttack => !IsAttacking && !IsRecovering;
     public bool CanChainCombo => ComboWindowOpen;
@@ -63,5 +66,19 @@ public class CombatStateTracker : MonoBehaviour
         IsStepping = false;
         CombatDebug.Log(debugStates, "State", "Step ended → Back to Idle");
     }
+
+    public void StartDodge()
+    {
+        IsDodging = true;
+        CombatDebug.Log(debugStates, "State", "Fold Dodge STARTED");
+    }
+
+    public void EndDodge()
+    {
+        IsDodging = false;
+        CombatDebug.Log(debugStates, "State", "Fold Dodge ENDED → Back to Idle");
+    }
+
+
 
 }

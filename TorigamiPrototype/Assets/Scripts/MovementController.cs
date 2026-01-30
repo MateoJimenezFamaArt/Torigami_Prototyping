@@ -5,6 +5,10 @@ public class MovementController : MonoBehaviour
 {
     [Header("Debug")]
     [SerializeField] private bool debugMovement = false;
+    [Header("Debug Gizmos")]
+    [SerializeField] private bool debugStepGizmos = true;
+    [SerializeField] private Color gizmoColor = Color.cyan;
+
 
     [Header("References")]
     [SerializeField] private CombatStateTracker state;
@@ -67,4 +71,27 @@ public class MovementController : MonoBehaviour
 
         state.EndStep();
     }
+
+    void OnDrawGizmosSelected()
+    {
+        if (!debugStepGizmos || movementData == null) return;
+
+        Gizmos.color = gizmoColor;
+
+        Vector3 origin = transform.position;
+
+        DrawStepGizmo(origin, transform.forward);
+        DrawStepGizmo(origin, -transform.forward);
+        DrawStepGizmo(origin, transform.right);
+        DrawStepGizmo(origin, -transform.right);
+    }
+
+    void DrawStepGizmo(Vector3 start, Vector3 direction)
+    {
+        Vector3 end = start + direction.normalized * movementData.stepDistance;
+
+        Gizmos.DrawLine(start, end);
+        Gizmos.DrawSphere(end, 0.05f);
+    }
+
 }
